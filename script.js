@@ -20,3 +20,12 @@ window.addEventListener("scroll", () => {
     ? header.classList.add("active")
     : header.classList.remove("active");
 });
+
+// Go To Top
+const goTopBtn = document.querySelector(".go-top");
+
+window.addEventListener("scroll", () => {
+  window.scrollY >= 800
+    ? goTopBtn.classList.add("active")
+    : goTopBtn.classList.remove("active");
+});
