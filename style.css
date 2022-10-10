@@ -88,6 +88,10 @@ body {
   background-color: var(--orange-web);
 }
 
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--gambog);
+}
+
 /* * Reused Style  */
 
 .container {
