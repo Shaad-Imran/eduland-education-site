@@ -451,6 +451,21 @@ body {
   font-size: 18px;
 }
 
+/* CTA ...... */
+.cta {
+  background: var(--raisin-black);
+  padding-block: 50px;
+}
+
+.cta-title {
+  color: var(--white);
+  margin-bottom: 30px;
+}
+
+.cta-banner {
+  display: none;
+}
+
 /* Responsive .....  */
 @media (min-width: 550px) {
   :root {
@@ -509,6 +524,27 @@ body {
 
   .instructor-title {
     max-width: 600px;
+  }
+
+  .cta {
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta .title-wrapper {
+    max-width: 60%;
+  }
+
+  .cta-banner {
+    display: block;
+    background: url("images/cta-banner.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    bottom: -26px;
+    left: 51%;
   }
 }
 
@@ -605,6 +641,7 @@ body {
   }
 
   .about-banner {
+    position: relative;
     margin-bottom: 0;
   }
 
@@ -681,6 +718,30 @@ body {
     left: 0;
     z-index: -1;
   }
+
+  .cta .title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .cta-title {
+    position: relative;
+    margin-bottom: 0;
+    width: calc(100% - 200px);
+  }
+
+  .cta-title .vector-line {
+    right: -20px;
+    bottom: 0;
+  }
+
+  .cta-banner {
+    left: 60%;
+    width: 320px;
+    bottom: -39px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -694,5 +755,13 @@ body {
 
   .instructor {
     padding-bottom: 150px;
+  }
+
+  .cta .title-wrapper {
+    max-width: 64%;
+  }
+
+  .cta-banner {
+    left: 68%;
   }
 }
