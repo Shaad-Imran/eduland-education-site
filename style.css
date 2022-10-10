@@ -392,6 +392,65 @@ body {
   margin-inline: auto;
 }
 
+/* Teachers ......  */
+.instructor {
+  padding-block: var(--section-padding);
+}
+
+.instructor .title-wrapper {
+  margin-bottom: 80px;
+}
+
+.instructor-title {
+  margin-bottom: 30px;
+}
+
+.instructor-list {
+  display: grid;
+  gap: 40px;
+}
+
+.instructor-card {
+  text-align: center;
+}
+
+.instructor-card .card-banner {
+  margin-bottom: 30px;
+  transition: var(--transition);
+}
+
+.instructor-card:hover .card-banner {
+  transform: translateY(-5px);
+}
+
+.instructor-card img {
+  width: 100%;
+  max-width: max-content;
+  margin-inline: auto;
+}
+
+.instructor-card .card-title {
+  color: var(--onyx);
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-2);
+}
+
+.instructor-card .card-subtitle {
+  margin-bottom: 15px;
+}
+
+.card-social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-social-link {
+  color: var(--onyx);
+  font-size: 18px;
+}
+
 /* Responsive .....  */
 @media (min-width: 550px) {
   :root {
@@ -413,6 +472,10 @@ body {
 
   .departments-card {
     padding: 30px;
+  }
+
+  .instructor-list {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -442,6 +505,10 @@ body {
 
   .departments-list {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .instructor-title {
+    max-width: 600px;
   }
 }
 
@@ -582,6 +649,38 @@ body {
     justify-content: space-between;
     align-items: flex-start;
   }
+
+  .instructor {
+    position: relative;
+    z-index: 1;
+  }
+
+  .instructor .vector-line:first-child {
+    top: 50px;
+    left: 0;
+    z-index: -1;
+  }
+
+  .instructor .title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .instructor-title {
+    max-width: 500px;
+    margin-bottom: 0;
+  }
+
+  .instructor-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .instructor .vector-line:last-child {
+    bottom: -100px;
+    left: 0;
+    z-index: -1;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -591,5 +690,9 @@ body {
 
   .departments-title {
     max-width: 550px;
+  }
+
+  .instructor {
+    padding-bottom: 150px;
   }
 }
